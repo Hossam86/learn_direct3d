@@ -18,7 +18,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Executable (assumes there's a top-level main.cpp)
-add_executable(MyDirectXApp main.cpp)
+add_executable(MyDirectXApp WIN32 main.cpp)
 
 # Try to find DirectX Tool Kit (DirectXTK) installed through vcpkg. We use
 # the CONFIG mode so the vcpkg-provided config file is preferred when the
