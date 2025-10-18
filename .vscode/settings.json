@@ -1,0 +1,14 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.configureArgs": [
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE"
+    ],
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build/",
+    ],
+    "C_Cpp.default.compilerPath": "cl.exe",
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+}
