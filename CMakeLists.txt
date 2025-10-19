@@ -19,7 +19,26 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Executable (assumes there's a top-level main.cpp)
-add_executable(MyDirectXApp WIN32 main.cpp ChiliWin.h Window.h window.cpp)
+add_executable(MyDirectXApp WIN32
+	main.cpp
+	ChiliWin.h
+	Window.h
+	window.cpp
+	ChiliException.h
+	ChiliException.cpp
+	resource.h
+	Keyboard.h
+	Keyboard.cpp
+	WindowsMessageMap.h
+	Mouse.h
+	Mouse.cpp
+	App.h
+	App.cpp
+	ChiliTimer.h
+	ChiliTimer.cpp
+	Graphics.h
+	Graphics.cpp
+	)
 
 # Try to find DirectX Tool Kit (DirectXTK) installed through vcpkg. We use
 # the CONFIG mode so the vcpkg-provided config file is preferred when the
