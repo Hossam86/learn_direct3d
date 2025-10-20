@@ -38,7 +38,13 @@ add_executable(MyDirectXApp WIN32
 	ChiliTimer.cpp
 	Graphics.h
 	Graphics.cpp
-	)
+	dxerr.h
+	dxerr.cpp
+	DxgiInfoManager.h
+	DxgiInfoManager.cpp
+	DXGetErrorDescription.inl
+	DXTrace.inl
+)
 
 # Try to find DirectX Tool Kit (DirectXTK) installed through vcpkg. We use
 # the CONFIG mode so the vcpkg-provided config file is preferred when the
@@ -54,7 +60,7 @@ endif()
 
 # Link standard Windows DirectX libraries when building for Windows
 if(WIN32)
-	target_link_libraries(MyDirectXApp PRIVATE d3d12 dxgi d3dcompiler)
+	target_link_libraries(MyDirectXApp PRIVATE d3d11 dxgi d3dcompiler)
 endif()
 
 message(STATUS "Configured project '${PROJECT_NAME}'")

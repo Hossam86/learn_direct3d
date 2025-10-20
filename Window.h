@@ -77,7 +77,6 @@ private:
 public:
 	Keyboard kbd;
 	Mouse mouse;
-	Graphics gfx;
 
 private:
 	int width;
